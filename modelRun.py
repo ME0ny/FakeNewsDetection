@@ -19,7 +19,7 @@ def vectorize(text,item_to_index):
     return return_list
 
 def main(text):
-    text = WASHINGTON (Reuters) - The head of a conservat	
+    text = ['WASHINGTON (Reuters) - The head of a conservat']
     text = preprocess_text(text)
     list1 = ''.join(text.tolist()).split(' ')
     list1.extend(''.join(text.tolist()).split(' '))
@@ -32,4 +32,3 @@ def main(text):
     text = vectorize(text,item_to_index)
     model = load_model('path_to_my_model.h5')
     return model.predict(text)
-    
