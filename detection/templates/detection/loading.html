@@ -1,0 +1,16 @@
+{% extends "detection/base.html" %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/loading.css' %}">  
+{% endblock %}
+
+{% block content %}
+    <div class="content1">
+        <div class="cantent">
+            <p class="bigword"> {{ message }}</p>
+            <br>
+            <img href="{% static 'img/inf.png'%}" class="loader">
+        </div>
+    </div>
+{% endblock %}
