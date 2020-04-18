@@ -33,11 +33,11 @@ h1,h2,h3,h4,h5,h6,p, a
     .top_menu    ul li.two {
             overflow : hidden;
             float : none;
+            
     }
     .top_menu    ul li.two li {
-            width: 25%;
-            text-align: right;
             float: left;
+            margin-left: 7%;
 
     }
 
@@ -46,4 +46,5 @@ h1,h2,h3,h4,h5,h6,p, a
             text-align: left;
 
     }
+
     
