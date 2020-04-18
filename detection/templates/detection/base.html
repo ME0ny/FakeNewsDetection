@@ -2,10 +2,18 @@
 <html>
     <head>
         <title>FakeNewsDetect</title>
+        <head>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        </head>
+        {% block head %}
+        {% endblock %}
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
+        <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,500,600,700&display=swap&subset=cyrillic" rel="stylesheet">
     </head>
     <body>
-        {% include "detection/menu.html" %}
+        <div class="header">
+            {% include "detection/menu.html" %}
+        </div>
         <div class="content">
             {% block content %}
             {% endblock %}

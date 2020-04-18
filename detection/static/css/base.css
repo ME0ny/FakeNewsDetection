@@ -1,3 +1,49 @@
-html {
+html 
+{
     background-color: #2196F3; 
 }
+body
+{
+    margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6,p, a
+{
+    font-family: 'Comfortaa';
+    font-weight: normal;
+    font-style: normal;
+    margin: 0;
+    color: #FFFFFF;
+}
+.header
+{
+    margin-left: 5%;
+    margin-top: 3%;
+    width: 100%;
+    text-align: justify;
+}
+.top_menu ul {
+    list-style-type: none;
+    overflow: hidden;
+    margin-right: 21%;
+}
+.top_menu    ul li.one {
+            float: left;
+    }
+    .top_menu    ul li.two {
+            overflow : hidden;
+            float : none;
+    }
+    .top_menu    ul li.two li {
+            width: 25%;
+            text-align: right;
+            float: left;
+
+    }
+
+    .top_menu    ul li .content {
+            display: inline-block;
+            text-align: left;
+
+    }
+    

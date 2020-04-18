@@ -1,5 +1,12 @@
 {% extends "detection/base.html" %}
+{% load static %}
 
-{%block content %}
-    <p> HW_index</p>
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">  
+{% endblock %}
+
+{% block content %}
+    <div class="content1">
+        <p> HW_index</p>
+    </div>
 {% endblock %}
