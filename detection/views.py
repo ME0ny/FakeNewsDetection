@@ -11,3 +11,11 @@ def loading(request):
         'message': message, 
     })
 
+def result(request):
+    ctx = {
+        'fake': True,
+        'title': "Вести",
+        'rating': 5,
+    }
+    return render(request, 'detection/result.html',ctx)
+

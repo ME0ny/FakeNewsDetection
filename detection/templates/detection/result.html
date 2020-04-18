@@ -1,0 +1,30 @@
+{% extends "detection/base.html" %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/result.css' %}">  
+{% endblock %}
+
+{% block content %}
+    <div class="content1">
+        <div class="cantent">
+            <p class="smallword"> ты попал на </p>
+            <br>
+            {% if fake == True %}
+            <p class="bigword color"> Fake News</p>
+            {% else %}
+            <p class="bigword color"> Approved News</p>
+            {% endif %}
+            <br>
+            <br>
+            <h2>Издание "{{ title }}" опубликовало проверенную информацию.</h2>
+            <br>
+            <h2 style="text-align: center;">рейтинг {{ title }} {{ rating }}</h2>
+            <br>
+            <h2>Мы {% if rating < 4 %}
+                не
+                {% endif %} рекомендуем доверять этому источнику
+            </h2>
+        </div>
+    </div>
+{% endblock %}
