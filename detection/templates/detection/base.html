@@ -1,0 +1,14 @@
+{% load static %}
+<html>
+    <head>
+        <title>FakeNewsDetect</title>
+        <link rel="stylesheet" href="{% static 'css/base.css' %}" type="text\html">
+    </head>
+    <body>
+        {% include "detection/menu.html" %}
+        <div class="content">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </body>
+</html>
