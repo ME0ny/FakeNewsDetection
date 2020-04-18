@@ -7,7 +7,43 @@
     left: 50%;
     transform: translate(-50%, -50%);   
 }
-.content1 p{
-    display: block;
+.content1 .cantent{
     text-align: center;
+    line-height: 50px;
+}
+   ul.hr li {
+    margin-left: 1%;
+    display: inline-block; /* Отображать как строчный элемент */
+   }
+.bigword {
+    font-size:48px;
+    font-weight: 600;
+}
+.color {
+    color: #E9984E;
+}
+.smallword {
+
+    font-size: 30px;
+}
+.link_field
+{
+    box-shadow: -4px 0px 10px rgba(0, 0, 0, 0.25), 4px 0px 10px rgba(0, 0, 0, 0.1), 0px -4px 10px rgba(0, 0, 0, 0.25), 0px 4px 10px rgba(0, 0, 0, 0.25);
+    font-family: 'Comfortaa';
+    margin-top: 50px;
+    width:70%;
+    font-size: 24px;
+
+}
+.submit_button
+{
+    padding: 10px 60px 10px 60px;
+    font-family: 'Comfortaa';
+    color: white;
+    font-size: 30px;
+    margin-top: 25px;
+    background-color: #E9984E;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.25);
+    border: none;
 }

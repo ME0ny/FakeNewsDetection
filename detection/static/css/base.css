@@ -29,6 +29,7 @@ h1,h2,h3,h4,h5,h6,p, a
 }
 .top_menu    ul li.one {
             float: left;
+            padding-right: 10%;
     }
     .top_menu    ul li.two {
             overflow : hidden;
