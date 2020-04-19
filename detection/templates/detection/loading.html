@@ -29,10 +29,6 @@
             <script>
                 $.ajax({
                 url: '/runMain/{{source}}/{{text}}',
-                data: {
-                  'source': "{{source}}",
-                  'text': "{{text}}"
-                },
                 dataType: 'json',
                 success: function (data) {
                   if (data.isfake) {

@@ -25,7 +25,7 @@ else:
 
 def main(text):
     tokenizer = BertTokenizer.from_pretrained('./', do_lower_case=True)
-    model = BertForSequenceClassification.from_pretrained("./", num_labels=2)
+    model = BertForSequenceClassification.from_pretrained('./')
     model.to(device)
     texts = []
     preds = []
