@@ -1,4 +1,4 @@
-from pytoarch_transformers import BertForQuestionAnswering, BertForTokenClassification
+from pytorch_transformers import BertForQuestionAnswering, BertForTokenClassification
 from pytorch_transformers import AdamW, BertForSequenceClassification
 from pytorch_transformers import BertTokenizer, BertConfig
 from sklearn.model_selection import train_test_split

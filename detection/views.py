@@ -4,7 +4,7 @@ from django.http import JsonResponse
 import json
 from django.urls import reverse
 from django.views.decorators.csrf import csrf_exempt
-#from . import modelRun
+from . import modelRun
 
 
 def index(request):
@@ -46,7 +46,7 @@ def runMain(request,source,text):
     # text = request.GET.get('text', None)
     # source = request.GET.get('source', None)
     data = {
-        'isfake': 0,#modelRun.main(text)
+        'isfake': modelRun.main(text)
     }
     return JsonResponse(data)
 
