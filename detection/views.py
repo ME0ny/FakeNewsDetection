@@ -5,13 +5,17 @@ import json
 from django.urls import reverse
 from django.views.decorators.csrf import csrf_exempt
 
+
 def index(request):
     if request.method == 'POST':
         form = ArticleParseRequestForm(request.POST)
         if form.is_valid():
             req = form.save(commit=False)
-            return redirect('loading',{'myurl':req.url})
+            intext = req.text
+            insource = req.source
+            return loading(request,intext,insource)
     else:
+        #initial = {'text': "Введите текст статьи", 'source': "Введите источник статьи"}
         form = ArticleParseRequestForm()
     return render(request, 'detection/index.html', {'form':form})
 
@@ -21,12 +25,13 @@ def index(request):
 #     return render(request, 'detection/index.html', {'myurl': url})
 
 
-def loading(request,myurl):
+def loading(request,text,source):
     message = "Звоним редактору"
     return render(request, 'detection/loading.html', 
     {
         'message': message,
-        'myurl':myurl
+        'text' : text,
+        'source': source,
     })
 
 def result(request):

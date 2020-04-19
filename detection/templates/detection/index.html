@@ -20,7 +20,11 @@
             {{ form.non_field_errors }}
             <form id="inputform" action="/" method="POST">
                 {% csrf_token %}
-                {{ form}}
+                <label for="{{ form.source.id_for_label }}"></label>
+                {{ form.source}}
+                <label for="{{ form.text.id_for_label }}"></label>
+                {{ form.text}}
+                
                 <!-- <input id="url" type="text" class="link_field" value="вставь ссылку статьи на проверку"> -->
                 <br>
                 <input id="butsubmit "type="submit" class="submit_button" value="Проверить">
