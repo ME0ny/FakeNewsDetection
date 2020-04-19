@@ -31,12 +31,9 @@
                 url: '/runMain/{{source}}/{{text}}',
                 dataType: 'json',
                 success: function (data) {
-                  if (data.isfake) {
-                    alert("статья фэк");
-                    }
-                    else
-                    alert('статья не фэк');
-                    window.location.replace("/result/{{source}}/"+data.isfake)
+                    window.setTimeout(function (){
+                        window.location.replace("/result/{{source}}/"+data.isfake)
+                    }, 20000)
                 
                   
                 }

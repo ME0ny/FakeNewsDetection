@@ -2,9 +2,10 @@ from django.shortcuts import render,redirect
 from .forms import ArticleParseRequestForm
 from django.http import JsonResponse
 import json
+import random
 from django.urls import reverse
 from django.views.decorators.csrf import csrf_exempt
-from . import modelRun
+#from . import modelRun
 
 
 def index(request):
@@ -46,7 +47,7 @@ def runMain(request,source,text):
     # text = request.GET.get('text', None)
     # source = request.GET.get('source', None)
     data = {
-        'isfake': modelRun.main(text)
+        'isfake': random.randint(0,1)
     }
     return JsonResponse(data)
 
