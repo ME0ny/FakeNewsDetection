@@ -43,5 +43,6 @@ ul.hr li {
     display: inline-block; /* Отображать как строчный элемент */
    }
    a{
+       word-spacing: 10px;
        text-decoration: none;
    }

@@ -17,11 +17,16 @@
                 </li>
             </ul>
             <p class="smallword">загрузи статью и узнай врут ли тебе</p>
-            <form>
-                <input type="text" class="link_field" value="вставь ссылку статьи на проверку">
+            {{ form.non_field_errors }}
+            <form id="inputform" action="/" method="POST">
+                {% csrf_token %}
+                {{ form}}
+                <!-- <input id="url" type="text" class="link_field" value="вставь ссылку статьи на проверку"> -->
                 <br>
-                <input type="submit" class="submit_button" value="Проверить">
+                <input id="butsubmit "type="submit" class="submit_button" value="Проверить">
             </form>
         </div>
     </div>
 {% endblock %}
+
+

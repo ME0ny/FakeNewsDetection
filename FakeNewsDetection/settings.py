@@ -26,11 +26,14 @@ SECRET_KEY = '@1b(yuww^*@rhgjg_1fqlby%rps5w=7uwp7h1y(zt#2fh-u&o_'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+INTERNAL_IPS = [
+    '127.0.0.1',
+]
 
 # Application definition
 
 INSTALLED_APPS = [
+    'debug_toolbar',
     'detection',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -41,6 +44,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
