@@ -25,7 +25,7 @@ SECRET_KEY = '@1b(yuww^*@rhgjg_1fqlby%rps5w=7uwp7h1y(zt#2fh-u&o_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['it-demo.ru', 'www.it-demo.ru', 'molochko.it-demo.ru']
 INTERNAL_IPS = [
     '127.0.0.1',
 ]
