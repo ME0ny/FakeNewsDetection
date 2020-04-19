@@ -10,14 +10,14 @@
         <div class="cantent">
             <p class="smallword"> ты попал на </p>
             <br>
-            {% if fake == True %}
-            <p class="bigword color"> Fake News</p>
+            {% if isfake %}
+                <p class="bigword color"> Fake News</p>
             {% else %}
-            <p class="bigword color"> Approved News</p>
+                <p class="bigword color"> Approved News</p>
             {% endif %}
             <br>
             <br>
-            <h2>Издание "{{ title }}" опубликовало проверенную информацию.</h2>
+            <h2>Издание "{{ source }}" опубликовало проверенную информацию.</h2>
             <br>
             <h2 style="text-align: center;">рейтинг {{ title }} {{ rating }}</h2>
             <br>
@@ -30,8 +30,8 @@
             <br>
             <ul class="hr">
                 <li>
-                    <a href="#check" class="button">проверить</a> 
-                    <a href="#archive" class="button">топ 10</a>    
+                    <a href="/" class="button">проверить ещё</a> 
+                    <a href="/top" class="button">топ 10</a>    
                 </li>
             </ul>
         </div>

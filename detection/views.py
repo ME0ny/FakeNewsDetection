@@ -1,9 +1,10 @@
 from django.shortcuts import render,redirect
 from .forms import ArticleParseRequestForm
-from django.http import HttpResponseRedirect
+from django.http import JsonResponse
 import json
 from django.urls import reverse
 from django.views.decorators.csrf import csrf_exempt
+#from . import modelRun
 
 
 def index(request):
@@ -26,19 +27,26 @@ def index(request):
 
 
 def loading(request,text,source):
-    message = "Звоним редактору"
     return render(request, 'detection/loading.html', 
     {
-        'message': message,
         'text' : text,
         'source': source,
     })
 
-def result(request):
+def result(request,source,isfake):
     ctx = {
-        'fake': True,
-        'title': "Вести",
-        'rating': 5,
+        'source': source,
+        'isfake': isfake,
+        #'rating': 5,
     }
+    print(type(isfake))
     return render(request, 'detection/result.html',ctx)
+
+def runMain(request,source,text):
+    # text = request.GET.get('text', None)
+    # source = request.GET.get('source', None)
+    data = {
+        'isfake': 0,#modelRun.main(text)
+    }
+    return JsonResponse(data)
 
