@@ -22,3 +22,26 @@
     text-align: center;
     line-height: 25px;
 }
+.button
+{
+        padding: 10px 80px 10px 80px;
+        height: 150px;
+        width: 150px;
+        font-weight: bold;
+        font-family: 'Comfortaa';
+        color: white;
+        font-size: 30px;
+        margin-top: 25px;
+        background-color: #E9984E;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0,0,0,0.25);
+        border: none;
+}
+ul.hr li {
+    
+    word-spacing: 50px;
+    display: inline-block; /* Отображать как строчный элемент */
+   }
+   a{
+       text-decoration: none;
+   }
