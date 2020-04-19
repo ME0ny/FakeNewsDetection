@@ -80,8 +80,13 @@ WSGI_APPLICATION = 'FakeNewsDetection.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'u0831054_lhd',
+        'USER': 'u0831054_lhduser',
+        'PASSWORD': 'nadeotmka1',
+        'HOST':'localhost',
+
+
     }
 }
 
