@@ -8,9 +8,24 @@
 {% block content %}
     <div class="content1">
         <div class="cantent">
-            <p class="bigword"> {{ message }} {{text}} {{source}}</p>
+            <h1 class="tlt">
+                <ul class="texts">
+                    <li><p class="bigword"> звоним редактору</p></li>
+                    <li><p class="bigword"> опрашиваем свидетелей</p></li>
+                    <li><p class="bigword"> проверяем источники</p></li>
+                    <li><p class="bigword"> считаем баллы</p></li>
+                </ul>
+            </h1>
             <br>
-            <img href="{% static 'img/inf.gif'%}" class="loader">
+            <img src="{% static 'img/inf.gif'%}" class="loader">
+            <script>
+                $('.texts').textillate({
+                    minDisplayTime: 1000, 
+                    in: { effect: 'fadeIn', sync: true }, 
+                    out :{  delay: 1, effect: 'fadeOut', sync: true},
+                    loop: true
+                });
+                </script>
         </div>
     </div>
 {% endblock %}

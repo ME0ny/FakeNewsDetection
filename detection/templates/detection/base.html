@@ -2,11 +2,14 @@
 <html>
     <head>
         <title>FakeNewsDetect</title>
-        <head>
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        </head>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         {% block head %}
         {% endblock %}
+        <script src="{% static 'js/jquery.lettering-0.6.1.min.js' %}"></script>
+        <script src="http://jschr.github.io/textillate/jquery.textillate.js"></script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
         <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,500,600,700&display=swap&subset=cyrillic" rel="stylesheet">
     </head>
